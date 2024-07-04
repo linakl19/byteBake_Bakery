@@ -12,6 +12,11 @@ body {
     background-color: #fff; /* A basic background color */
 }
 
+:root{
+    --dark_Bg_Purple: #7277A5;
+    --light_Bg_Purple: #f4e7fe;
+    --text_Color_Purple: #4E2FC9;
+}
 /* Add your custom CSS below this line */
 header{
     display: flex;
@@ -19,18 +24,32 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 1rem 5rem;
-    background-color: #f4e7fe;
+    background: radial-gradient(circle, rgba(114,119,165,1) 0%, rgba(244,231,254,0.8953956582633054) 100%);
+    color: #333;
     position: sticky; top: 0;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
-header span{
+header a{
     font-weight: 700;
     font-size: 2rem;
+    color: #333;
+    text-decoration: none;
 }
 header nav ul{
     display: flex;
     flex-direction: row;
     list-style: none;
     font-size: 1.15rem;
+
+    li{
+        margin: 0 0.7rem;
+    }
+}
+li{
+    transition: 0.5s ease-in-out;
+}
+li:hover{
+    transform: scale(1.03);
 }
 li a{
     text-decoration: none;
@@ -41,6 +60,7 @@ li a{
 li a:hover{
     text-decoration: underline;
     font-weight: bold;
+    color: var(--text_Color_Purple);
 }
 
 .brand{
